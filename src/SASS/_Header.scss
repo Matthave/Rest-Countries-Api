@@ -1,0 +1,131 @@
+header{
+    display: flex;
+    flex-direction: column;
+    transition: $transitionDarkTheme;
+}
+
+.header--darkMode{
+  background-color: $darkModeElements;
+  color:$darkModeTextAndLightModeElem;
+}
+
+.heading{
+    display: flex;
+    padding:15px 10px;
+    justify-content: space-between;
+    @include mq(large){
+      padding: 20px 115px
+    }
+    &__title{
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+     &__darkModeTitle{
+         font-size: 1.4rem;
+         font-weight: 600;
+         cursor: pointer;
+     }
+}
+
+.far{
+  margin-right: 5px;
+}
+
+
+.searcher{
+  width:100%;
+  margin: 0 auto;
+  background-color: $lightModeBgc;
+  transition: $transitionDarkTheme;
+  &--darkMode{
+    background-color: $darkModeBgc;
+  }
+  @include mq(large){
+    display: flex;
+  }
+}
+
+.form-control{
+  width:50%;
+  margin:0;
+  padding:0;
+  border:none;
+  font-size: 1.2rem;
+  width:100%;
+  transition: $transitionDarkTheme;
+  &:enabled{
+    background-color: #fff;
+  }
+  &--darkMode{
+    &::placeholder {
+      color: darken($darkModeTextAndLightModeElem, 20%);
+    }
+    &:enabled{
+      background-color: $darkModeElements;
+      color:$darkModeTextAndLightModeElem;
+    }
+  }
+}
+
+.form-row{
+  width:100%;
+}
+
+.region{
+  display: flex;
+}
+
+.form{
+  padding: 0px 15px;
+  @include mq(large){
+    padding: 7.5px 15px;
+    margin-right: 100px;
+    align-self: center;
+  }
+}
+
+.custom-select{
+  height: 40px;
+  padding-right: 40px;
+  border:none;
+  transition: $transitionDarkTheme;
+  &--darkMode{
+    background-color: $darkModeElements;
+    box-shadow: 0px 0px 5px 1px #222;
+    color:$darkModeTextAndLightModeElem;
+  }
+}
+
+.searcher__inputWrap{
+  display: flex;
+  background-color: #fff;
+  padding: 7.5px 15px;
+  border-radius: 5px;
+  width: 95%;
+  margin: 15px auto 25px;
+  box-shadow: 0px 0px 5px 1px #eee;
+  transition: $transitionDarkTheme;
+  &--darkMode{
+    background-color: $darkModeElements;
+    box-shadow: 0px 0px 5px 1px #222
+  }
+  @include mq(large){
+    width: 30%;
+    margin:15px auto 15px 110px;
+  }
+}
+
+.fas{
+  align-self: center;
+  margin: 0 20px 0 10px;
+  cursor: pointer;
+  &:hover{
+    color:red;
+  }
+}
+
+.form-control:focus {   
+  border-color: rgba(126, 239, 104, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(126, 239, 104, 0);
+  outline: 0 none;
+}
