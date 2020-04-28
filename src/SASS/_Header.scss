@@ -1,24 +1,32 @@
 header{
+    position: relative;
     display: flex;
     flex-direction: column;
-    transition: $transitionDarkTheme;
-}
-
-.header--darkMode{
-  background-color: $darkModeElements;
-  color:$darkModeTextAndLightModeElem;
 }
 
 .heading{
+    position: fixed;
+    width:100%;
     display: flex;
-    padding:15px 10px;
     justify-content: space-between;
+    height: 55px;
+    z-index: 999;
+    background-color: #fff;
+    transition: $transitionDarkTheme;
+    &--darkMode{
+      background-color: $darkModeElements;
+      color:$darkModeTextAndLightModeElem;
+    }
     @include mq(large){
-      padding: 20px 115px
+      padding: 20px 140px;
     }
     &__title{
         font-size: 1.6rem;
         font-weight: 800;
+        align-self: center;
+    }
+    &__darkMode{
+      align-self: center;
     }
      &__darkModeTitle{
          font-size: 1.4rem;
@@ -33,6 +41,7 @@ header{
 
 
 .searcher{
+  transform: translateY(55px);
   width:100%;
   margin: 0 auto;
   background-color: $lightModeBgc;

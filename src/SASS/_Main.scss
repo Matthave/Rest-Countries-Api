@@ -8,6 +8,7 @@ main{
 }
 
 .countries{
+    padding-top: 55px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -16,9 +17,7 @@ main{
         justify-content: center;
         flex-wrap: wrap;
         padding: 0px 110px;
-    }
-    @include mq(xlarge){
-        
+        padding-top: 55px;
     }
 }
 
@@ -31,7 +30,10 @@ main{
     width:75%;
     height: 300px;
     transition: $transitionDarkTheme;
+    padding-bottom: 25px;
+    cursor: pointer;
     &--darkMode{
+        background-color: $darkModeElements;
         box-shadow: 0px 0px 5px 1px #222;
     }
     @include mq(small){
@@ -68,9 +70,11 @@ main{
     flex-direction: column;
     justify-content: start;
     color:$lightModeText;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     transition: $transitionDarkTheme;
+    background-color: transparent;
     &--darkMode{
-        background-color: $darkModeElements;
         color:$darkModeTextAndLightModeElem
     }
 }
