@@ -11,6 +11,9 @@
     transition:$transitionDarkTheme ;
     padding: 15px;
     margin:0 auto;
+    &--darkMode{
+      background-color: $darkModeBgc;
+    }
     @include mq(small){
       padding: 15px 50px;
     }
@@ -86,7 +89,6 @@
     &__span{
       font-weight: 500;
       margin-left: 5px;
-      color:$lightModeText;
     }
 }
 
@@ -106,6 +108,10 @@
     background-color: #fff;
     padding: 3px 25px;
     box-shadow: 0px 0px 3px 0px #ccc;
+    &--darkMode{
+      background-color: $darkModeElements;
+      box-shadow: 0px 0px 3px 0px #222;
+    }
   }
   &__name{
     width:100%;
@@ -125,4 +131,11 @@
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 800;
+  &--darkMode{
+    color:$darkModeTextAndLightModeElem;
+  }
+}
+
+li.darkMode{
+  color:$darkModeTextAndLightModeElem;
 }

@@ -1,140 +1,132 @@
-header{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 .heading{
-    position: fixed;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    height: 55px;
-    z-index: 999;
-    background-color: #fff;
-    transition: $transitionDarkTheme;
-    &--darkMode{
-      background-color: $darkModeElements;
-      color:$darkModeTextAndLightModeElem;
-    }
-    @include mq(large){
-      padding: 20px 140px;
-    }
-    &__title{
-        font-size: 1.6rem;
-        font-weight: 800;
-        align-self: center;
-    }
-    &__darkMode{
-      align-self: center;
-    }
-     &__darkModeTitle{
-         font-size: 1.4rem;
-         font-weight: 600;
-         cursor: pointer;
-     }
-}
-
-.far{
-  margin-right: 5px;
+  position: fixed;
+  display:flex;
+  width:100%;
+  height: 75px;
+  margin: 0 auto;
+  align-items: center;
+  z-index: 999;
+  background-color: #fff;
+  transition: $transitionDarkTheme;
+  padding: 0 20px;
+  @include mq(medium){
+    padding-left:50px;
+    padding-right: 50px;
+  }
+  @include mq(medium){
+    padding-left:95px;
+    padding-right: 95px;
+  }
+  &--darkMode{
+    background-color: $darkModeElements;
+    box-shadow: 0px 0px 5px 1px #222;
+    color:$darkModeTextAndLightModeElem;
+  }
+  &__wrap{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  }
+  &__title{
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin:0;
+  }
+  &__darkMode{
+    cursor: pointer;
+  }
+  &__darkModeTitle{
+    font-size: 1.4rem;
+    margin:0;
+  }
+  .far{
+    margin-right: 7.5px;
+  }
 }
 
 
 .searcher{
-  transform: translateY(55px);
-  width:100%;
-  margin: 0 auto;
-  background-color: $lightModeBgc;
+  background-color:$lightModeBgc;
+  padding-top: 105px;
+  padding-bottom:25px;
+  padding-left:20px;
+  padding-right: 20px;
   transition: $transitionDarkTheme;
-  &--darkMode{
-    background-color: $darkModeBgc;
+  @include mq(medium){
+    padding-left:50px;
+    padding-right: 50px;
   }
   @include mq(large){
     display: flex;
+    align-items: center;
+    padding-left:95px;
+    padding-right:95px;
+  }
+  &--darkMode{
+    background-color: $darkModeBgc;
+  }
+  &__inputWrap{
+    display: flex;
+    align-items: center;
+    width:100%;
+    margin:0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: $transitionDarkTheme;
+    &--darkMode{
+      background-color: $darkModeElements;
+      box-shadow: 0px 0px 5px 1px #222;
+    }
+    @include mq(medium){
+      max-width: 400px;
+      margin: 0 auto 0 0;
+    }
+   .fas{
+     cursor: pointer;
+     font-size: 15px;
+     margin-right: 5px;
+     &:hover{
+       color:red;
+     }
+   }
   }
 }
 
 .form-control{
-  width:50%;
-  margin:0;
-  padding:0;
   border:none;
-  font-size: 1.2rem;
-  width:100%;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 1.5rem;
   transition: $transitionDarkTheme;
   &:enabled{
     background-color: #fff;
   }
   &--darkMode{
-    &::placeholder {
-      color: darken($darkModeTextAndLightModeElem, 20%);
-    }
     &:enabled{
       background-color: $darkModeElements;
+      color:$darkModeTextAndLightModeElem;
+    }
+    &::placeholder{
       color:$darkModeTextAndLightModeElem;
     }
   }
 }
 
-.form-row{
-  width:100%;
-}
-
-.region{
-  display: flex;
-}
-
-.form{
-  padding: 0px 15px;
-  @include mq(large){
-    padding: 7.5px 15px;
-    margin-right: 100px;
-    align-self: center;
-  }
-}
-
 .custom-select{
-  height: 40px;
-  padding-right: 40px;
   border:none;
+  width:170px;
+  margin:25px auto 0;
+  height: 40px;
+  font-size: 1.5rem;
   transition: $transitionDarkTheme;
   &--darkMode{
     background-color: $darkModeElements;
     box-shadow: 0px 0px 5px 1px #222;
     color:$darkModeTextAndLightModeElem;
   }
-}
-
-.searcher__inputWrap{
-  display: flex;
-  background-color: #fff;
-  padding: 7.5px 15px;
-  border-radius: 5px;
-  width: 95%;
-  margin: 15px auto 25px;
-  box-shadow: 0px 0px 5px 1px #eee;
-  transition: $transitionDarkTheme;
-  &--darkMode{
-    background-color: $darkModeElements;
-    box-shadow: 0px 0px 5px 1px #222
-  }
   @include mq(large){
-    width: 30%;
-    margin:15px auto 15px 110px;
+    margin-top:0;
   }
 }
 
-.fas{
-  align-self: center;
-  margin: 0 20px 0 10px;
-  cursor: pointer;
-  &:hover{
-    color:red;
-  }
-}
-
-.form-control:focus {   
-  border-color: rgba(126, 239, 104, 0);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(126, 239, 104, 0);
-  outline: 0 none;
-}

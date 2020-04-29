@@ -10776,80 +10776,89 @@ html {
   font-size: 10px;
 }
 
-header {
-  position: relative;
+.heading {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 100%;
+  height: 75px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 999;
+  background-color: #fff;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  padding: 0 20px;
 }
 
-.heading {
-  position: fixed;
-  width: 100%;
+@media (min-width: 800px) {
+  .heading {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 800px) {
+  .heading {
+    padding-left: 95px;
+    padding-right: 95px;
+  }
+}
+
+.heading--darkMode {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0px 0px 5px 1px #222;
+          box-shadow: 0px 0px 5px 1px #222;
+  color: white;
+}
+
+.heading__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 55px;
-  z-index: 999;
-  background-color: #fff;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-}
-
-.heading--darkMode {
-  background-color: #2b3945;
-  color: white;
-}
-
-@media (min-width: 1024px) {
-  .heading {
-    padding: 20px 140px;
-  }
+  width: 100%;
 }
 
 .heading__title {
   font-size: 1.6rem;
   font-weight: 800;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin: 0;
 }
 
 .heading__darkMode {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  cursor: pointer;
 }
 
 .heading__darkModeTitle {
   font-size: 1.4rem;
-  font-weight: 600;
-  cursor: pointer;
+  margin: 0;
 }
 
-.far {
-  margin-right: 5px;
+.heading .far {
+  margin-right: 7.5px;
 }
 
 .searcher {
-  -webkit-transform: translateY(55px);
-          transform: translateY(55px);
-  width: 100%;
-  margin: 0 auto;
   background-color: #fafafa;
+  padding-top: 105px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
-.searcher--darkMode {
-  background-color: #202c37;
+@media (min-width: 800px) {
+  .searcher {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -10857,16 +10866,62 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 95px;
+    padding-right: 95px;
   }
 }
 
-.form-control {
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-size: 1.2rem;
+.searcher--darkMode {
+  background-color: #202c37;
+}
+
+.searcher__inputWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.searcher__inputWrap--darkMode {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0px 0px 5px 1px #222;
+          box-shadow: 0px 0px 5px 1px #222;
+}
+
+@media (min-width: 800px) {
+  .searcher__inputWrap {
+    max-width: 400px;
+    margin: 0 auto 0 0;
+  }
+}
+
+.searcher__inputWrap .fas {
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.searcher__inputWrap .fas:hover {
+  color: red;
+}
+
+.form-control {
+  border: none;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 1.5rem;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
@@ -10875,55 +10930,33 @@ header {
   background-color: #fff;
 }
 
-.form-control--darkMode::-webkit-input-placeholder {
-  color: #cccccc;
-}
-
-.form-control--darkMode:-ms-input-placeholder {
-  color: #cccccc;
-}
-
-.form-control--darkMode::-ms-input-placeholder {
-  color: #cccccc;
-}
-
-.form-control--darkMode::placeholder {
-  color: #cccccc;
-}
-
 .form-control--darkMode:enabled {
   background-color: #2b3945;
   color: white;
 }
 
-.form-row {
-  width: 100%;
+.form-control--darkMode::-webkit-input-placeholder {
+  color: white;
 }
 
-.region {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.form-control--darkMode:-ms-input-placeholder {
+  color: white;
 }
 
-.form {
-  padding: 0px 15px;
+.form-control--darkMode::-ms-input-placeholder {
+  color: white;
 }
 
-@media (min-width: 1024px) {
-  .form {
-    padding: 7.5px 15px;
-    margin-right: 100px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
+.form-control--darkMode::placeholder {
+  color: white;
 }
 
 .custom-select {
-  height: 40px;
-  padding-right: 40px;
   border: none;
+  width: 170px;
+  margin: 25px auto 0;
+  height: 40px;
+  font-size: 1.5rem;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
@@ -10935,51 +10968,10 @@ header {
   color: white;
 }
 
-.searcher__inputWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #fff;
-  padding: 7.5px 15px;
-  border-radius: 5px;
-  width: 95%;
-  margin: 15px auto 25px;
-  -webkit-box-shadow: 0px 0px 5px 1px #eee;
-          box-shadow: 0px 0px 5px 1px #eee;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-}
-
-.searcher__inputWrap--darkMode {
-  background-color: #2b3945;
-  -webkit-box-shadow: 0px 0px 5px 1px #222;
-          box-shadow: 0px 0px 5px 1px #222;
-}
-
 @media (min-width: 1024px) {
-  .searcher__inputWrap {
-    width: 30%;
-    margin: 15px auto 15px 110px;
+  .custom-select {
+    margin-top: 0;
   }
-}
-
-.fas {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 0 20px 0 10px;
-  cursor: pointer;
-}
-
-.fas:hover {
-  color: red;
-}
-
-.form-control:focus {
-  border-color: rgba(126, 239, 104, 0);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(126, 239, 104, 0);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(126, 239, 104, 0);
-  outline: 0 none;
 }
 
 main {
@@ -10993,7 +10985,7 @@ main {
 }
 
 .countries {
-  padding-top: 55px;
+  padding-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11002,9 +10994,11 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .countries {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -11015,8 +11009,13 @@ main {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0px 110px;
-    padding-top: 55px;
+    padding: 30px 50px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .countries {
+    padding: 30px 0px;
   }
 }
 
@@ -11027,8 +11026,8 @@ main {
   border: none;
   -webkit-box-shadow: 0px 0px 5px 1px #eee;
           box-shadow: 0px 0px 5px 1px #eee;
-  width: 75%;
-  height: 300px;
+  width: 100%;
+  height: 350px;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   padding-bottom: 25px;
@@ -11041,25 +11040,19 @@ main {
           box-shadow: 0px 0px 5px 1px #222;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
   .card {
-    width: 45%;
-    margin: 0 5px;
-    margin-bottom: 40px;
+    width: 44%;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
 @media (min-width: 1024px) {
   .card {
-    width: 22%;
-    margin: 10px 10px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .card {
-    width: 21%;
-    margin: 25px;
+    width: 20%;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -11138,6 +11131,10 @@ main {
   transition: 0.2s linear;
   padding: 15px;
   margin: 0 auto;
+}
+
+.details--darkMode {
+  background-color: #202c37;
 }
 
 @media (min-width: 640px) {
@@ -11263,7 +11260,6 @@ main {
 .details__span {
   font-weight: 500;
   margin-left: 5px;
-  color: #111517;
 }
 
 .borders {
@@ -11295,6 +11291,12 @@ main {
           box-shadow: 0px 0px 3px 0px #ccc;
 }
 
+.borders__items--darkMode {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0px 0px 3px 0px #222;
+          box-shadow: 0px 0px 3px 0px #222;
+}
+
 .borders__name {
   width: 100%;
   font-size: 1.3rem;
@@ -11313,5 +11315,13 @@ main {
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: 800;
+}
+
+.name--darkMode {
+  color: white;
+}
+
+li.darkMode {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

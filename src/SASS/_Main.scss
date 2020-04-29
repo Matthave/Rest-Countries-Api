@@ -8,16 +8,20 @@ main{
 }
 
 .countries{
-    padding-top: 55px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    @include mq(small){
+    padding-left:30px;
+    padding-right: 30px;
+    @include mq(medium){
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 0px 110px;
-        padding-top: 55px;
+        padding: 30px 50px 0;
+    }
+    @include mq(xlarge){
+        padding: 30px 0px;
     }
 }
 
@@ -27,8 +31,8 @@ main{
     border-radius: 5px;
     border:none;
     box-shadow: 0px 0px 5px 1px #eee;
-    width:75%;
-    height: 300px;
+    width:100%;
+    height: 350px;
     transition: $transitionDarkTheme;
     padding-bottom: 25px;
     cursor: pointer;
@@ -36,19 +40,15 @@ main{
         background-color: $darkModeElements;
         box-shadow: 0px 0px 5px 1px #222;
     }
-    @include mq(small){
-       width:45%;
-       margin: 0 5px;
-       margin-bottom:  40px;
+    @include mq(medium){
+        width: 44%;
+        margin-right: 20px;
+        margin-left: 20px;
     }
     @include mq(large){
-        width:22%;
-        margin: 10px 10px;
-    }
-
-    @include mq(xlarge){
-        width:21%;
-        margin: 25px;
+        width: 20%;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 }
 

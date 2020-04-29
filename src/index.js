@@ -27,7 +27,10 @@ export default class Api {
     const searcher = document.querySelector('.searcher')
     const input = document.querySelector('.form-control')
     const select = document.querySelector('.custom-select')
-    const details = document.querySelector('details');
+    const details = document.querySelector('.details');
+    const allLi = document.querySelectorAll('li');
+    const detailsName = document.querySelector('.name')
+    const borderItems = document.querySelectorAll('.borders__items')
 
     searcher.classList.toggle('searcher--darkMode');
     inputsWrap.classList.toggle('searcher__inputWrap--darkMode');
@@ -36,6 +39,16 @@ export default class Api {
     headeing.classList.toggle('heading--darkMode');
     main.classList.toggle('main--darkMode');
     details.classList.toggle('details--darkMode')
+    detailsName.classList.toggle('name--darkMode')
+
+
+    borderItems.forEach((item) => {
+      item.classList.toggle('borders__items--darkMode')
+    })
+
+    allLi.forEach((li) => {
+      li.classList.toggle('darkMode')
+    })
 
     cards.forEach((card) => {
       card.classList.toggle('card--darkMode')
