@@ -14,9 +14,9 @@
     padding-left:50px;
     padding-right: 50px;
   }
-  @include mq(medium){
-    padding-left:95px;
-    padding-right: 95px;
+  @include mq(large){
+    padding-left:100px;
+    padding-right: 100px;
   }
   &--darkMode{
     background-color: $darkModeElements;
@@ -63,8 +63,8 @@
   @include mq(large){
     display: flex;
     align-items: center;
-    padding-left:95px;
-    padding-right:95px;
+    padding-left:100px;
+    padding-right:100px;
   }
   &--darkMode{
     background-color: $darkModeBgc;
