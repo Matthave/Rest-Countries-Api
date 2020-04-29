@@ -31,6 +31,7 @@ export default class Api {
     const allLi = document.querySelectorAll('li');
     const detailsName = document.querySelector('.name')
     const borderItems = document.querySelectorAll('.borders__items')
+    const detailsBtn = document.querySelector('.details__btn');
 
     searcher.classList.toggle('searcher--darkMode');
     inputsWrap.classList.toggle('searcher__inputWrap--darkMode');
@@ -40,6 +41,7 @@ export default class Api {
     main.classList.toggle('main--darkMode');
     details.classList.toggle('details--darkMode')
     detailsName.classList.toggle('name--darkMode')
+    detailsBtn.classList.toggle('details__btn--darkMode')
 
 
     borderItems.forEach((item) => {
@@ -246,9 +248,9 @@ export default class Api {
     topLevel.textContent = `${detailsOfCountry[0].topLevelDomain}`;
     currencies.textContent = `${detailsOfCountry[0].currencies[0].name}`;
     lang.textContent = `${detailsOfCountry[0].languages[0].name}`;
-    borderOne.textContent = `${detailsOfCountry[0].borders[0]}`;
-    borderTwo.textContent = `${detailsOfCountry[0].borders[1]}`;
-    borderThree.textContent = `${detailsOfCountry[0].borders[2]}`;
+    borderOne.textContent = `${detailsOfCountry[0].borders[0] ? detailsOfCountry[0].borders[0] : '-'}`;
+    borderTwo.textContent = `${detailsOfCountry[0].borders[1] ? detailsOfCountry[0].borders[1] : '-'}`;
+    borderThree.textContent = `${detailsOfCountry[0].borders[2] ? detailsOfCountry[0].borders[2] : '-'}`;
 
     document.body.style.overflow = 'hidden'
     this.details.style.left = '0'
