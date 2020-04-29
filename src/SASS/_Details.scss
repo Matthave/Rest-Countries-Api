@@ -6,6 +6,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content:flex-start;
     background-color:$lightModeBgc;
     z-index: 999;
     transition:$transitionDarkTheme;
@@ -22,6 +23,9 @@
     }
     &__btnWrap{
       width:100%;
+      @include mq(large){
+        padding-top: 50px;
+      }
     }
     &__btn{
       width: 70px;
@@ -31,6 +35,7 @@
       box-shadow: 0px 0px 5px 1px #eee;
       font-size: 1.4rem;
       transition:$transitionDarkTheme;
+      cursor: pointer;
       &--darkMode{
         background-color: $darkModeElements;
         box-shadow: 0px 0px 5px 1px #222;
@@ -71,7 +76,7 @@
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
-        align-self:flex-start;
+        align-self:center;
       }
     }
     &__ulWrap{
@@ -82,9 +87,19 @@
       }
     }
     &__listTwo{
+      margin-top: 25px;
       @include mq(large){
         margin: 0px 20px;
       }
+    }
+    &__detailsWrap{
+      @include mq(large){
+        display: flex;
+        width:100%;
+        justify-content: space-between;
+        margin-bottom: 100px;
+      }
+
     }
 }
 
