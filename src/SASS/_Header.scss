@@ -8,16 +8,16 @@
   z-index: 999;
   background-color: #fff;
   transition: $transitionDarkTheme;
-  padding: 0 20px;
+  padding: 0 30px;
   box-shadow: 0px 0px 5px 1px #eee;
-  @include mq(medium){
-    padding-left:50px;
-    padding-right: 50px;
-  }
-  @include mq(large){
-    padding-left:100px;
-    padding-right: 100px;
-  }
+  @include mq (large){
+    padding-left: 70px;
+    padding-right: 70px;
+}
+@include mq (xxlarge){
+  padding-left: 85px;
+  padding-right: 85px;
+}
   &--darkMode{
     background-color: $darkModeElements;
     box-shadow: 0px 0px 5px 1px #222;
@@ -53,18 +53,18 @@
   background-color:$lightModeBgc;
   padding-top: 90px;
   padding-bottom:25px;
-  padding-left:20px;
-  padding-right: 20px;
+  padding-left:30px;
+  padding-right: 30px;
   transition: $transitionDarkTheme;
-  @include mq(medium){
-    padding-left:50px;
-    padding-right: 50px;
-  }
   @include mq(large){
     display: flex;
     align-items: center;
-    padding-left:100px;
-    padding-right:100px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  @include mq (xxlarge){
+    padding-left: 85px;
+    padding-right: 85px;
   }
   &--darkMode{
     background-color: $darkModeBgc;

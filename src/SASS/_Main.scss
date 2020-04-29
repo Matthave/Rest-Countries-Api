@@ -16,13 +16,14 @@ main{
     padding-right: 30px;
     @include mq(medium){
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap;
-        padding: 30px 50px 0;
     }
-    @include mq(xlarge){
-        padding: 5px 35px;
+    @include mq (large){
+        padding-left: 50px;
+        padding-right: 50px;
     }
+
 }
 
 .card{
@@ -39,8 +40,10 @@ main{
         background-color: $darkModeElements;
         box-shadow: 0px 0px 5px 1px #222;
     }
-    @include mq (large){
-        margin: 0 30px 50px;
+    @include mq(xlarge){
+        width: 21%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 

@@ -35,6 +35,9 @@
       box-shadow: 0px 0px 5px 1px #eee;
       font-size: 1.4rem;
       transition:$transitionDarkTheme;
+      @include mq(xxlarge){
+        margin-left: 70px;
+      }
       cursor: pointer;
       &--darkMode{
         background-color: $darkModeElements;
@@ -48,10 +51,12 @@
       background-position: center;
       background-size: cover;
       margin: 25px 0px;
+      background-repeat: no-repeat;
       @include mq(large){
         width:40vw;
         height: 300px;
         margin:0;
+        background-size: contain;
       }
       @include mq(xlarge){
         height: 370px;
@@ -93,13 +98,13 @@
       }
     }
     &__detailsWrap{
+      width:100%;
       @include mq(large){
         display: flex;
         width:100%;
         justify-content: space-between;
         margin-bottom: 100px;
       }
-
     }
 }
 
