@@ -16,7 +16,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 75px;
   margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -88,7 +88,7 @@ html {
 
 .searcher {
   background-color: #fafafa;
-  padding-top: 90px;
+  padding-top: 110px;
   padding-bottom: 25px;
   padding-left: 30px;
   padding-right: 30px;
@@ -163,7 +163,7 @@ html {
 
 .form-control {
   border: none;
-  height: 40px;
+  height: 45px;
   padding-left: 10px;
   font-size: 1.5rem;
   width: 100%;
@@ -200,7 +200,7 @@ html {
   border: none;
   width: 170px;
   margin: 25px auto 0;
-  height: 40px;
+  height: 45px;
   font-size: 1.5rem;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -268,15 +268,16 @@ main {
 
 .card {
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   border-radius: 5px;
   border: none;
   -webkit-box-shadow: 0px 0px 5px 1px #eee;
           box-shadow: 0px 0px 5px 1px #eee;
   width: 285px;
-  height: 300px;
+  height: 375px;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -288,9 +289,19 @@ main {
 
 @media (min-width: 1200px) {
   .card {
-    width: 21%;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 20%;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+.card__txt {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1440px) {
+  .card__txt {
+    font-size: 1.6rem;
   }
 }
 
@@ -298,10 +309,17 @@ main {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   width: 100%;
-  height: 150px;
+  height: 160px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1440px) {
+  .card__img {
+    height: 175px;
+  }
 }
 
 .card-body {
@@ -333,7 +351,13 @@ main {
 .card__title {
   font-size: 1.7rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1440px) {
+  .card__title {
+    font-size: 2rem;
+  }
 }
 
 .span__type {
@@ -352,7 +376,7 @@ main {
 
 .details {
   position: fixed;
-  top: 60px;
+  top: 75px;
   left: -110%;
   width: 100%;
   height: 100vh;
